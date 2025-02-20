@@ -1,0 +1,468 @@
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"></meta>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
+    <title>Event Registration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        h2 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex w-full flex-col items-center">
+        <h1 class="text-2xl text-gray-600">Techfest event Registration</h1>
+        <!-- line/divider -->
+        <div class="my-2 w-[90%] border-b-2 border-t border-gray-300"></div>
+        <p class="w-[90%] text-center">Join the revolution of innovation, Register now for Techfest 2K24 and be part of
+            the future!</p>
+        <div class="mb-8" style="border-bottom: 3px solid black;"></div>
+
+        <!-- event selections -->
+        <div class="w-[90%]">
+            <label class="w-[90%]text-gray-700 mb-1" for="event-selector"> Select your event </label>
+
+            <select class="form-select mb-4 mt-1 block w-full rounded-md border-0 border-gray-300 bg-gray-100 p-4 shadow-sm focus:border-blue-300 focus:outline-none focus:ring" id="event-selector" name="event-selector">
+                <!-- <option class="p-4" value="" disabled selected>Select Event</option> -->
+            </select>
+        </div>
+
+        <!-- email -->
+        <label class="mb-1 w-[90%]" for="email" id="">Email</label>
+        <input class="w-[90%] rounded-md border-0 bg-gray-100 p-4" id="email" placeholder="Email" required="" type="email" />
+        <span class="hidden w-[90%]" id="emailError" style="color: red;">Enter a valid email id</span>
+
+        <div class="mb-8"></div>
+
+        <!-- contact-no -->
+        <label class="mb-1 w-[90%]" for="contact-no" id="">Contact Number</label>
+        <input class="w-[90%] rounded-md border-0 bg-gray-100 p-4" id="contact-no" placeholder="Contact Number" required="" type="text" />
+        <span class="hidden w-[90%]" id="conatactError" style="color: red;">Please enter a valid 10 digit no.</span>
+        <div class="mb-8"></div>
+
+        <!-- Team leader -->
+        <label class="mb-1 hidden w-[90%]" for="member1" id="label1">Member 1</label>
+        <input class="hidden w-[90%] rounded-md border-0 bg-gray-100 p-4" id="member1" placeholder="Member 1" required="" type="text" />
+        <span class="hidden w-[90%]" id="member1Error" style="color: red;">Please enter the member name</span>
+        <div class="mb-8"></div>
+
+        <!-- member2 -->
+        <label class="mb-1 hidden w-[90%]" for="member2" id="label2">Member 2</label>
+        <input class="mb-8 hidden w-[90%] rounded-md border-0 bg-gray-100 p-4" id="member2" placeholder="Member 2" type="text" />
+
+        <!-- member3 -->
+        <label class="mb-1 hidden w-[90%]" for="member3" id="label3">Member 3</label>
+        <input class="mb-8 hidden w-[90%] rounded-md border-0 bg-gray-100 p-4" id="member3" placeholder="Member 3" type="text" />
+
+        <!-- member4 -->
+        <label class="mb-1 hidden w-[90%]" for="member4" id="label4">Member 4</label>
+        <input class="mb-8 hidden w-[90%] rounded-md border-0 bg-gray-100 p-4" id="member4" placeholder="Member 4" type="text" />
+
+        <!-- member5 -->
+        <label class="mb-1 hidden w-[90%]" for="member5" id="label5">Member 5</label>
+        <input class="mb-8 hidden w-[90%] rounded-md border-0 bg-gray-100 p-4" id="member5" placeholder="Member 5" type="text" />
+
+        <!-- member6 -->
+        <label class="mb-1 hidden w-[90%]" for="member6" id="label6">Member 6</label>
+        <input class="mb-8 hidden w-[90%] rounded-md border-0 bg-gray-100 p-4" id="member6" placeholder="Member 6" type="text" />
+
+        <!-- college -->
+        <label class="mb-1 w-[90%]" for="college-name">College Name</label>
+        <input class="mb-8 w-[90%] rounded-md border-0 bg-gray-100 p-4" id="college-name" placeholder="College name" required="" type="text" />
+
+        <!-- branch selector -->
+        <div class="w-[90%]">
+            <label class="w-[90%]text-gray-700 mb-1" for="branch-selector">Select an option:</label>
+
+            <select class="form-select mt-1 block w-full rounded-md border-0 border-gray-300 bg-gray-100 p-4 shadow-sm focus:border-blue-300 focus:outline-none focus:ring" id="branch-selector" name="branch-selector" required="">
+                <option class="p-4" disabled="" selected="" value="none">Select Your Branch</option>
+                <option class="p-4" value="Computer">Computer</option>
+                <option class="p-4" value="IT">IT</option>
+                <option class="p-4" value="ENTC">ENTC</option>
+                <option class="p-4" value="Electrical">Electrical</option>
+                <option class="p-4" value="Mechanical">Mechanical</option>
+                <option class="p-4" value="Civil">Civil</option>
+                <option class="p-4" value="others">Others</option>
+            </select>
+        </div>
+        <span class="hidden w-[90%]" id="branchSelectorError" style="color: red;">Please select your branch</span>
+        <div class="mb-8"></div>
+
+        <!-- line/divider -->
+        <div class="my-8 w-[90%] border-b-2 border-t border-gray-300"></div>
+
+        <p class="w-[90%] text-center text-red-600">The coordinator will check the transaction ID; make sure to check it
+            carefully!</p>
+
+        <button class="my-4 w-[90%] rounded-md bg-green-600 p-4 font-semibold text-white transition-all duration-300 hover:bg-green-700 focus:outline-none active:bg-green-800" onclick="showPaymentPopup()">
+            Register &amp; pay
+            <i aria-hidden="true" class="fa fa-sign-out"></i>
+        </button>
+
+        <!-- line/divider -->
+        <div class="my-8 w-[90%] border-b-2 border-t border-gray-300"></div>
+        <p class="mb-8 w-[90%] text-center">If you have any payment related issues, please don't hesitate to contact our
+            team. We are here to assist you and ensure that your payment is processed smoothly. <a class="font-semibold text-blue-500" href="https://wa.me/+917038823053"> Contact us</a></p>
+        <p class="mb-8 w-[90%] text-center py-4 bg-gray-200">Techfest SIEM 2024 @ <a class="font-semibold text-blue-500" href="https://www.cesasiem.com">cesasiem.com</a> </p>
+    </div>
+
+    <!-- payement popup -->
+    <div class="fixed inset-0 z-50 flex hidden items-center justify-center bg-black bg-opacity-20 backdrop-blur-sm" id="payment-popup">
+        <div class="flex w-[90%] max-w-max flex-col items-center rounded-xl bg-white px-12 py-4">
+            <div class="flex w-full justify-end"><i aria-hidden="true" class="fa fa-times-circle" onclick="closePaymentPopup()">close</i></div>
+
+            <!-- event name -->
+            <p class="text-2xl text-blue-500" id="event-name-popup">Event Name : Blind coding</p>
+
+            <!-- entry fee -->
+            <p class="text-xl text-red-500" id="event-fee-popup">pay amount : 200rs</p>
+
+            <p><i aria-hidden="true" class="fa fa-camera"></i> Scan to pay</p>
+
+            <!-- payment qr -->
+            <div id="payment-qr"></div>
+
+            <!-- transaction id -->
+            <label class="mb-2" for="transaction-id">Enter 12 Digit UTR/UPI Ref. ID:</label>
+            <input class="mb-8 w-[90%] rounded-md border-0 bg-gray-100 p-4" id="transaction-id" placeholder="Enter 12 Digit UTR/UPI Ref. ID:" required="" type="text" />
+
+            <button class="my-4 hidden w-[90%] rounded-md bg-green-600 p-4 font-semibold text-white transition-all duration-300 hover:bg-green-700 focus:outline-none active:bg-green-800" id="event-register-btn" onclick="registerForEvent()">
+                Complete Registration
+                <i aria-hidden="true" class="fa fa-sign-out"></i>
+            </button>
+            <p class="text-red-600" id="event-register-error">Register button will only be visible if a 12 digit code is
+                entered!</p>
+        </div>
+    </div>
+
+    <!-- registration sucess popup -->
+    <div class="fixed inset-0 z-50 flex hidden items-center justify-center bg-black bg-opacity-20 backdrop-blur-sm" id="registration-success-popup">
+        <div class="flex w-[350px] flex-col items-center rounded-xl bg-white px-12 py-4">
+            <div class="flex w-full justify-end"><i aria-hidden="true" class="fa fa-times-circle" onclick="closeRegistrationPopup()">close</i></div>
+            <p class="font-semibold text-blue-500">You're now part of our TechFest 2k23.</p>
+            <img alt="" class="my-4 overflow-clip rounded-md object-cover p-2" src="https://media.tenor.com/rhghD8RPVhUAAAAd/congratulations-tribe.gif" srcset="" width="100%" />
+            <p class="w-full text-center" id="registered-member-box"></p>
+            <p class="w-full text-center" id="registered-transaction-box"></p>
+            <p class="w-full text-center" id="registered-event-box"></p>
+            <br />
+            <p class="w-full text-center">Please take a Screenshot Event coordinator will ask for verification.</p>
+            <div class="my-4 w-[90%] rounded-md bg-green-600 p-4 font-semibold text-white transition-all duration-300 hover:bg-green-700 focus:outline-none active:bg-green-800" id="event-register-btn" onclick="openWp()">
+                <i aria-hidden="true" class="fa fa-whatsapp"></i>
+                Join Event Group
+                <i aria-hidden="true" class="fa fa-sign-out"></i>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function getUrlParams() {
+        return new URLSearchParams(window.location.search);
+    }
+
+    function updateUrlParam(param, value) {
+        const urlParams = getUrlParams();
+        urlParams.set(param, value);
+
+        // Replace the current URL with the updated parameters
+        window.history.replaceState({}, '', `${window.location.pathname}?${urlParams}`);
+    }
+
+    //
+    const eventsList = {
+        'blind-coding': {
+            name: 'blind-coding',
+            max_members: 1,
+            price: 50,
+            wp_link: 'https://chat.whatsapp.com/JGINLOJDikp8MbD2hq4Ldr',
+        },
+        'Prompt Engineering': {
+            name: 'Prompt Engineering',
+            max_members: 1,
+            price: 30,
+            wp_link: 'https://chat.whatsapp.com/CKL0Tat9x3z2V6tlxtkN2R',
+        },
+        'Technical Cross-word': {
+            name: 'Technical Cross-word',
+            max_members: 2,
+            price: 50,
+            wp_link: 'https://chat.whatsapp.com/JpoaTS1fW4G41liCGmWymP',
+        },
+        'Project Exhibition (Solo)': {
+            name: 'Project Exhibition (Solo)',
+            max_members: 1,
+            price: 200,
+            wp_link: 'https://chat.whatsapp.com/EypqRJw1N7QBqr6YuXY7tT',
+        },
+        'Project Exhibition (TEAM)': {
+            name: 'Project Exhibition (TEAM)',
+            max_members: 5,
+            price: 300,
+            wp_link: 'https://chat.whatsapp.com/EypqRJw1N7QBqr6YuXY7tT',
+        },
+        'Fillers': {
+            name: 'Fillers',
+            max_members: 1,
+            price: 20,
+            wp_link: 'https://chat.whatsapp.com/FMbae2o5A3eDXQiOv0MQQf',
+        },
+        'Valorant': {
+            name: 'Valorant',
+            max_members: 5,
+            price: 250,
+            wp_link: 'https://chat.whatsapp.com/I5cKjfjg8MNHM19MSwVtc9',
+        },
+        'Treasure Hunt': {
+            name: 'Treasure Hunt',
+            max_members: 5,
+            price: 250,
+            wp_link: 'https://chat.whatsapp.com/FsGix4VdFvg7VPrR0FaImo',
+        },
+        'Roadies': {
+            name: 'Roadies',
+            max_members: 1,
+            price: 80,
+            wp_link: 'https://chat.whatsapp.com/Cq3Q43lVxsMKB79FmSA1qU',
+        },
+        'futsal': {
+            name: 'futsal',
+            max_members: 5,
+            price: 300,
+            wp_link: 'https://chat.whatsapp.com/HgSWzwOpxiM8rUO2gfmKrS',
+        },
+        'Dhamshres': {
+            name: 'Dhamshres',
+            max_members: 4,
+            price: 100,
+            wp_link: 'https://chat.whatsapp.com/Gh0NkF2XCj61jIfW3UM61K',
+        },
+    }
+
+    //
+    const urlParams = new URLSearchParams(window.location.search);
+    const eventSelector = document.getElementById('event-selector')
+    const branchSelector = document.getElementById('branch-selector')
+    const emailInput = document.getElementById('email')
+    const contactInput = document.getElementById('contact-no')
+    const emailErrorBox = document.getElementById('emailError')
+    const paymentPopupBox = document.getElementById('payment-popup');
+    const transactionNoInput = document.getElementById('transaction-id')
+    const collegeInput = document.getElementById('college-name')
+
+    const member1 = document.getElementById('member1')
+    const member2 = document.getElementById('member2')
+    const member3 = document.getElementById('member3')
+    const member4 = document.getElementById('member4')
+    const member5 = document.getElementById('member5')
+    const member6 = document.getElementById('member6')
+    let loading = false;
+
+    const showInputFields = (max_members) => {
+        for (let index = 1; index <= 6; index++) {
+            document.getElementById(`label${index}`).classList.add('hidden');
+            document.getElementById(`member${index}`).classList.add('hidden');
+
+            document.getElementById(`member${index}`).value = '';
+
+        }
+        for (let index = 1; index <= max_members; index++) {
+            document.getElementById(`label${index}`).classList.toggle('hidden');
+            document.getElementById(`member${index}`).classList.toggle('hidden');
+        }
+
+    }
+
+    eventSelector.addEventListener('change', function () {
+        // This function will be called when the select value changes
+        const selectedEventType = eventSelector.value;
+        const selectedEventDetails = eventsList[selectedEventType];
+        updateUrlParam('event', selectedEventDetails.name)
+        showInputFields(selectedEventDetails.max_members);
+        eventDetails = selectedEventDetails;
+    });
+    //
+
+
+    for (const eventName in eventsList) {
+        if (eventsList.hasOwnProperty(eventName)) {
+            eventSelector.innerHTML += `<option class="p-4" value="${eventName}">${eventsList[eventName].name}</option>`;
+        }
+    }
+
+    let eventType = urlParams.get('event');
+
+    if (eventType == null || eventType == undefined || eventType == '') {
+        eventType = 'Project Exhibition (Solo)';
+        updateUrlParam('event', eventType)
+    }
+
+    let eventDetails = eventsList[eventType]
+    // setting default selected event as query
+    eventSelector.value = eventDetails.name;
+
+    // register & pay button
+    const showPaymentPopup = () => {
+        var email = emailInput.value.trim();
+
+        // Regular expression for basic email validation
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (emailRegex.test(email)) {
+            emailErrorBox.classList.add('hidden');
+        } else {
+            alert('Please enter a valid email address');
+            emailErrorBox.classList.remove('hidden');
+            return;
+        }
+
+        // contact validation
+        if (contactInput.value.length != 10) {
+            document.getElementById('conatactError').classList.remove('hidden');
+            alert('Please enter a valid 10 digit contact no');
+
+            return;
+        } else {
+            document.getElementById('conatactError').classList.add('hidden');
+        }
+
+
+        // member validation
+        if (member1.value.trim().length <= 0) {
+            alert('Enter the member no.')
+            document.getElementById('member1Error').classList.remove('hidden');
+            return;
+        } else {
+            document.getElementById('member1Error').classList.add('hidden');
+        }
+
+
+        // branch validation
+        if (branchSelector.value == 'none') {
+            alert('Please selct your branch')
+            document.getElementById('branchSelectorError').classList.remove('hidden');
+            return;
+        } else {
+            document.getElementById('branchSelectorError').classList.add('hidden');
+        }
+
+        let upiLink = `upi://pay?pa=nikya09@uboi&pn=Pranav%20Pansare&am=${eventDetails.price}.00&cu=INR&aid=uGICAgMDQwofueA`;
+        paymentPopupBox.classList.remove('hidden');
+        document.getElementById('payment-qr').innerHTML = `<img src="https://api.qrserver.com/v1/create-qr-code/?data=${upiLink}&size=200x200" alt="QR Code"
+                class="my-6" />`
+        document.getElementById('event-name-popup').innerText = 'Event Name : ' + eventDetails.name;
+        document.getElementById('event-fee-popup').innerText = 'Pay Amount : ' + eventDetails.price;
+
+
+    }
+
+    // close payment popup
+    const closePaymentPopup = () => {
+        document.getElementById('payment-popup').classList.add('hidden');
+    }
+
+    // close registration popup
+    const closeRegistrationPopup = () => {
+        document.getElementById('registration-success-popup').classList.add('hidden');
+    }
+
+
+    // Attach the change event listener
+    transactionNoInput.addEventListener('input', function (e) {
+        console.log(`length : ${transactionNoInput.value.trim().length}`);
+        if (transactionNoInput.value.trim().length != 12) {
+            document.getElementById('event-register-error').classList.remove('hidden');
+            document.getElementById('event-register-btn').classList.add('hidden');
+        } else {
+            document.getElementById('event-register-error').classList.add('hidden');
+            document.getElementById('event-register-btn').classList.remove('hidden');
+        }
+    });
+
+
+    const showRegistrationSuccessPopup = () => {
+        document.getElementById('registration-success-popup').classList.remove('hidden');
+        document.getElementById('registered-member-box').innerText = 'Name : ' + member1.value.trim();
+        document.getElementById("registered-transaction-box").innerText = 'Transaction id : ' + transactionNoInput.value.trim();
+        document.getElementById('registered-event-box').innerText = 'Event : ' + eventDetails.name;
+        resetForm()
+    }
+
+    const openWp = () => {
+        // window.open(eventDetails.wp_link, "_blank");
+        window.location.href = eventDetails.wp_link;
+    }
+
+    const registerForEvent = async () => {
+
+        if (loading) {
+            console.log('cancelled the register function bcz of loading');
+            return;
+        }
+
+        loading = true;
+        const scriptUrl = 'https://script.google.com/macros/s/AKfycbwQ9w30x0D6sdzsWmkmSB1bFIIxdqmu_rkdTlg7fWMjIEAQcG3mxq1Z-46cotxtzskC/exec';
+
+        let details = {
+            'event': eventSelector.value.trim(),
+            'email': emailInput.value.trim(),
+            'contact': contactInput.value.trim(),
+            'college': collegeInput.value.trim(),
+            'branch': branchSelector.value.trim(),
+            'transaction': transactionNoInput.value.trim(),
+            'member1': member1.value.trim(),
+            'member2': member2.value.trim(),
+            'member3': member3.value.trim(),
+            'member4': member4.value.trim(),
+            'member5': member5.value.trim(),
+            'member6': member6.value.trim(),
+        }
+        console.log(details);
+        try {
+            const response = await fetch(
+                scriptUrl, {
+                method: 'POST',
+                redirect: "follow",
+                headers: {
+                    "Content-Type": "text/plain;charset=utf-8",
+                    // 'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(details)
+            },);
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+            const data = await response.text();
+            closePaymentPopup();
+            showRegistrationSuccessPopup();
+            console.log(data);
+        } catch (error) {
+            console.error('Error:', error);
+        }
+        loading = false;
+    }
+
+    const resetForm = () => {
+
+        transactionNoInput.value = ''
+        collegeInput.value = ''
+        emailInput.value = ''
+        contactInput.value = ''
+
+        member1.value = ''
+        member2.value = ''
+        member3.value = ''
+        member4.value = ''
+        member5.value = ''
+        member6.value = ''
+
+    }
+
+    showInputFields(eventDetails.max_members);
+</script>
+
+</html>

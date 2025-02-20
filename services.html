@@ -1,0 +1,324 @@
+<!doctype html>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+<style>
+
+.my-classx {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.columnx {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .columnx {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.containera {
+  padding: 5px 16px;
+  text-align: center;
+}
+
+.containera::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.buttonr {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 15px;
+  color: white;
+border-radius: 5px;
+
+font-size: 20px;
+  background:
+linear-gradient(to right,
+rgba(88, 166, 255, 0.96) 0,
+#4474ec 50%,
+#6410f7 100%);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+
+
+
+
+.accordionx {
+font-family: Quicksand,sans-serif;
+font-weight: 500;
+
+background:
+linear-gradient(to right,
+rgba(88, 166, 255, 0.96) 0,
+#4474ec 50%,
+#6410f7 100%);
+
+
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  padding: 16px;
+  width: 100%;
+
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 24px;
+  transition: 0.4s;
+}
+@media only screen and (max-width: 600px) {
+  .accordionx {
+    font-size: 18px;
+  }
+}
+.accordionx:hover
+{
+background:
+linear-gradient(to right,
+rgba(106, 65, 255, 0.96) 0,
+#44aeec 50%,
+#079cff 100%);
+}
+
+.accordionx:after {
+  content: '\002B';
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.accordionx.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 10px 10px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+
+  transition: max-height 0.5s ease-out;  text-align: center;
+
+}
+
+
+t {
+  background: linear-gradient(0deg, slateblue, slateblue) no-repeat right bottom / 0 var(--bg-h);
+  transition: background-size 350ms;
+  --bg-h: 100%;
+}
+t:where(:hover, :focus-visible) {
+  background-size: 100% var(--bg-h);
+  background-position-x: left;
+}
+
+.underline {
+  padding-bottom: 5px;
+  --bg-h: 2px;
+}
+
+
+
+t {
+  text-decoration: none;
+  color: inherit;
+  line-height: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+<div class="my-classx">
+<button class="accordionx">
+<i class="fa-solid fa-people-line"></i> MEET CESA CORE TEAM</button>
+<div class="panel">
+<hr />
+
+
+
+<br />
+
+<div class="row">
+  <div class="columnx">
+    <div class="card">
+      <!-- <img src="/w3images/team1.jpg" alt="Jane" style="width:100%"> -->
+      <div class="containera">
+        <h2>Nikhil Singh Jodha</h2>
+        <p class="title">President </p>
+        <p><a style="text-decoration:none ;  color: #fff!important;
+            " href="https://www.linkedin.com/in/nikhil-singh-jodha-27b040201/" target="_blank" class="buttonr"><i class="fa-brands fa-linkedin"></i> Contact</a></p>
+    </div>
+    </div>
+  </div>
+
+  <div class="columnx">
+    <div class="card">
+      <!-- <img src="/w3images/team2.jpg" alt="Mike" style="width:100%"> -->
+      <div class="containera">
+        <h2>Gitesh Deshmukh</h2>
+        <p class="title">Vice president </p>
+        <p><a style="text-decoration:none ;  color: #fff!important;
+            " href="https://www.linkedin.com/in/gitesh-deshmukh-5051b0278/" target="_blank" class="buttonr"><i class="fa-brands fa-linkedin"></i> Contact</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="columnx">
+    <div class="card">
+      <!-- <img src="/w3images/team3.jpg" alt="John" style="width:100%"> -->
+      <div class="containera">
+        <h2>Mayank Katiyara</h2>
+        <p class="title">Secretary</p>
+        <p><a style="text-decoration:none ;  color: #fff!important;
+            " href="https://www.linkedin.com/in/mayank-katiyara-55631b24a/" target="_blank" class="buttonr"><i class="fa-brands fa-linkedin"></i> Contact</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="columnx">
+    <div class="card">
+      <!-- <img src="/w3images/team3.jpg" alt="John" style="width:100%"> -->
+      <div class="containera">
+        <h2>Omkar sonawane</h2>
+        <p class="title">Join Secretary </p>
+        <p><a style="text-decoration:none ;  color: #fff!important;
+            " href="https://www.linkedin.com/in/omkar-sonawane-23b094230/" target="_blank" class="buttonr"><i class="fa-brands fa-linkedin"></i> Contact</a></p>
+      </div>
+    </div>
+  </div>
+
+
+<div class="columnx">
+    <div class="card">
+      <!-- <img src="/w3images/team3.jpg" alt="John" style="width:100%"> -->
+      <div class="containera">
+        <h2>Pranav Pansare</h2>
+        <p class="title">Treasurer</p>
+        <p><a style="text-decoration:none ;  color: #fff!important;
+            " href="https://www.linkedin.com/in/pranav-pansare-a1034923b/" target="_blank" class="buttonr"><i class="fa-brands fa-linkedin"></i> Contact</a></p>
+      </div>
+    </div>
+  </div>
+
+
+
+<div class="columnx">
+    <div class="card">
+      <!-- <img src="/w3images/team3.jpg" alt="John" style="width:100%"> -->
+      <div class="containera">
+        <h2>Dimpal Yadav</h2>
+        <p class="title">Cultural Head</p>
+        <p><a style="text-decoration:none ;  color: #fff!important;
+            " href="https://www.linkedin.com/in/dimpal-yadav-ab1010275/" target="_blank" class="buttonr"><i class="fa-brands fa-linkedin"></i> Contact</a></p>
+      </div>
+    </div>
+  </div>
+
+<div class="columnx">
+    <div class="card">
+      <!-- <img src="/w3images/team3.jpg" alt="John" style="width:100%"> -->
+      <div class="containera">
+        <h2>Sakshi Shinde</h2>
+        <p class="title">Ladies Representative </p>
+        <p><a style="text-decoration:none ;  color: #fff!important;
+            " href="https://www.linkedin.com/in/sakshi-shinde-1a91b92a7/" target="_blank" class="buttonr"><i class="fa-brands fa-linkedin"></i> Contact</a></p>
+      </div>
+    </div>
+  </div>
+
+<div class="columnx">
+    <div class="card">
+      <!-- <img src="/w3images/team3.jpg" alt="John" style="width:100%"> -->
+      <div class="containera">
+        <h2>Rohit More</h2>
+        <p class="title">Discipline Coordinator</p>
+        <p><a style="text-decoration:none ;  color: #fff!important;
+            " href="https://www.linkedin.com/in/rohit-more-a067561b5/" target="_blank" class="buttonr"><i class="fa-brands fa-linkedin"></i> Contact</a></p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>
+
+</div>
+
+
+
+
+<script>
+
+
+
+var acc = document.getElementsByClassName("accordionx");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+
+// Simulate click on each accordion to open them by default
+for (i = 0; i < acc.length; i++) {
+  acc[i].click();
+}
+</script>
+
+
+</!doctype>

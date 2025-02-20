@@ -1,0 +1,1069 @@
+<!--<style>
+    @media screen and (max-width: 800px) .post {
+        margin: 0;
+        padding: 5px !important;
+        padding-top: 44px !important;
+    }
+
+    #cssmenu>ul>li>a {
+
+        font-weight: 100 !important;
+
+    }
+</style>-->
+
+<style>
+    @media screen and (max-width: 800px) {
+        .post {
+            margin: 0;
+            padding: 5px !important;
+            padding-top: 44px !important;
+        }
+    }
+
+    #cssmenu>ul>li>a {
+
+        font-weight: 100 !important;
+
+    }
+</style>
+
+
+<html>
+
+<head>
+    <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/9e6a7d9e5b.js"></script>
+    <meta charset="UTF-8"></meta>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet"></link>
+    <link href="https://codepen.io/denic/pen/YzyPzKG.css" rel="stylesheet"></link>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"></link>
+    <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet"></link>
+    <link href="https://senpaiisworking.github.io/buttoncss/b1_style.css" rel="stylesheet"></link>
+
+    <style>
+        /* --------------------------css */
+
+        ul {
+            list-style-type: circle !important;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* ol {
+            list-style: circle !important;
+        } */
+
+
+
+
+        .buttontut {
+            border-radius: 4px;
+            background: linear-gradient(to right, rgba(88, 166, 255, 0.96) 0, #4474ec 50%, #6410f7 100%);
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 13px;
+            padding: 11px 7px;
+            width: 160px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .buttontut span {
+            color: white;
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .buttontut span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .buttontut:hover span {
+            padding-right: 25px;
+        }
+
+        .buttontut:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+
+
+
+
+
+
+        .accordion {
+            /* background-color: #101C61; */
+            color: #FFFFFF;
+            cursor: pointer;
+            padding: 1.5rem;
+            background: linear-gradient(to right, rgb(0 68 145 / 96%) 0, #4474ec 50%, #6410f7 100%);
+            width: 100%;
+            border-radius: 1rem;
+            border: none;
+            margin-bottom: 0.5rem;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.7s;
+            padding-left: 24px;
+        }
+
+
+        .accord {
+            background-color: #883600;
+            color: #ffffff;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.7s;
+            padding-left: 24px;
+        }
+
+        .active,
+        .accordion:hover {
+            background-color: #295EBD;
+        }
+
+        .accordion:after {
+            content: '\002B';
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+            padding-right: 10px;
+        }
+
+        .active:after {
+            content: "\2212";
+        }
+
+
+
+        .panel {
+            padding: 0px 18px;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgb(14 60 93) 39%, rgb(15 49 74) 57%, rgba(0, 0, 0, 1) 100%);
+            overflow: hidden;
+            max-height: 0;
+            color: #FFFFFF;
+            border-radius: 1rem;
+
+            transition: max-height 0.2s ease-out;
+
+        }
+
+
+
+
+
+
+
+
+
+
+        hr.divider {
+            margin-top: 0em;
+            margin-bottom: 0em;
+            border-width: 2px;
+        }
+
+        .discriptionx {
+            text-align: center;
+            font-weight: 500;
+        }
+
+
+        .headtxt {
+            font-size: 15px;
+            text-align: left;
+            padding: 10px;
+            padding-left: 0px;
+            color: #e16639;
+            font-weight: 500;
+            font-family: Tahoma, Verdana, sans-serif;
+
+        }
+
+
+        .lisp {
+
+            padding: 10px;
+            padding-left: 16px;
+        }
+
+        .responsiven {
+            height: 200px;
+            width: 250px;
+            border: 7px ridge blue;
+        }
+
+        @media only screen and (min-width: 10px) {
+            .post-share {
+                display: none;
+            }
+        }
+
+
+        .entry-content-wrap {
+            margin: 1rem 0 0;
+            padding: 1rem 0.5rem 0.5rem !important;
+        }
+
+
+
+
+        .robotext {
+            letter-spacing: 2px;
+            padding-left: 16px;
+            width: 41rem;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .robotext {
+                width: 23rem;
+                text-align: center;
+            }
+        }
+
+        .panelx {
+            color: #FFFFFF;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+
+        }
+
+        @media only screen and (max-width: 600px) {
+            .panelx {
+                padding-bottom: 205px;
+                padding-top: 22px;
+            }
+        }
+
+
+
+
+
+
+
+
+        .city {
+            display: none
+        }
+
+
+        .containerz {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            /* padding-top: 56.25%;  */
+        }
+
+        .responsive-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+
+        .w3-blue,
+        .w3-hover-blue:hover {
+            color: #fff !important;
+            background-color: #000000 !important;
+        }
+
+        .popcolyt {
+            color: rgb(0, 0, 0);
+        }
+
+
+
+        hr {
+            margin: 3px 0 !important;
+        }
+
+        .post-body h2 {
+            margin-top: 1rem !important;
+        }
+
+        .w3-xlarge {
+            font-size: 40px !important;
+        }
+
+        .tocify-inner {
+            display: none !important;
+        }
+
+        .boxy {
+            width: 160px;
+            margin: 9px;
+        }
+
+        .w3-panel {
+            margin-bottom: 6px !important;
+            background-image: url("https://senpaiisworking.github.io/background/img2go.gif");
+            padding-bottom: 15px;
+        }
+
+        /* @media only screen and (max-width: 600px) {
+      .w3-panel  {
+        background-image: url("https://i.gifer.com/8oXf.gif");
+      background-size: 330px 377px;
+    
+      }
+    } */
+
+        .boxcont {
+            padding-bottom: 10px;
+        }
+
+
+        .anime-panelx {
+            border-radius: 8px;
+            margin-bottom: 6px;
+            background-image: url("https://senpaiisworking.github.io/background/img2go.gif");
+        }
+
+        .accordion i,
+        .buttontut span i {
+            margin-right: 8px;
+        }
+
+        .panel ul {
+            padding: 1.5rem 0rem 1rem 0rem;
+        }
+
+        .rules-heading {
+            color: red;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="anime-panelx">
+        <button class="accordion">
+            <i class="fa-solid fa-diagram-project"></i>
+            Events</button>
+
+        <div class="discriptionx">
+            <div class="w3-container">
+                <div class="w3-panel w3-blue w3-round-xlarge">
+
+                    <p style="background: linear-gradient(45deg, rgba(0,0,0,0) 0%, rgba(2,49,136,0.800147817916229) 52%, rgba(0,0,0,0.6012682660955007) 100%); background: rgb(0,0,0); font-family: Source Code Pro, monospace; font-size: 1.5rem; padding: 1rem; text-align: center;">
+                        <i class="fa-solid fa-diagram-project"></i>
+
+                        TechFest 2k24 Events
+                    </p>
+                    <p style="font-size: 13px;"> Get ready to experience the ultimate fusion of technology
+                        and creativity at TechFest 2k24! Join us, the Computer Engineering Student's
+                        Association, for an action-packed event featuring cutting-edge competitions,
+                        . Don't miss your chance to showcase your skills, learn from the best,
+                        and connect with like-minded tech enthusiasts. See you there!
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </body></html>
+    
+
+
+    <!--------------------------------------PART-1------------------->
+
+    <hr class="divider" />
+    <button class="accordion" id="project">
+        <i class="fas fa-lightbulb"></i>
+        Project Exhibition
+    </button>
+
+    <div class="panel">
+        <ul>
+            <!--<div style="padding-top:11px ;"></div>-->
+
+            <a href="https://www.cesasiem.com/p/techfest-event-registration.html?event=Project Exhibition (Solo)">
+                <button class="buttontut"><span>
+                        <i class="fas fa-external-link-alt"></i>
+                        Solo [250₹] </span> </button></a> </ul></div>
+
+            <a href="https://www.cesasiem.com/p/techfest-event-registration.html?event=Project Exhibition (TEAM)">
+                <button class="buttontut"><span>
+                        <i class="fas fa-external-link-alt"></i>
+                        Team [400₹] </span></button>
+            </a>
+
+            <div class="lisp">
+                <p style="color: #00ff15;"><i class="fa-solid fa-user-gear"></i> Event head : NISARGA LOKHANDE
+                </p>
+
+                <p><i class="fas fa-users"></i> Team members</p>
+                <ul>
+                    <li>Gayatri Wadge</li>
+                    <li>Dhanashri Sonawane</li>
+                    <li>Vibhuti Khaladkar</li>
+                    <li>Tanmayi Patil</li>
+                    <li>Deepika Salunkhe</li>
+                    <li>Soham Shelke</li>
+                    <li>Gayatri Ahire</li>
+                    <li>Sakshi Girme</li>
+
+                </ul>
+                <p class="rules-heading"><i class="fa-solid fa-angles-right"></i> Important Rules!</p>
+                <ul>
+
+                    <li>Maximum no participants in one team is five </li>
+
+                    <li>Every team will get 5 minutes time
+                        limit to represent his project. </li>
+
+                    <li>Judges may question you regarding your project. </li>
+
+                    <li>Judges decision will be final. </li>
+
+                    <li>Dress appropriately for the event. </li>
+
+                    <li>Be respectful to the other participants
+                        and the judges. </li>
+
+                    <li>Be punctual and follow the schedule
+                        set by&nbsp;the&nbsp;organizers. </li>
+
+                </ul>
+
+                <!--contact button-->
+                <a href="tel:+918380000905">
+                    <button class="buttontut"><span>
+                            <i class="fas fa-phone"></i>
+                            Contact us </span></button>
+                </a>
+            </div>
+            
+        
+    
+    <hr />
+
+    <!--------------------------------------PART-1------------------->
+
+
+    <hr class="divider" />
+    <button class="accordion" id="futsal">
+
+        <i class="fa-solid fa-volleyball"></i> Futsal Game
+    </button>
+    <div class="panel">
+
+        <ul>
+
+            <a href="https://www.cesasiem.com/p/techfest-event-registration.html?event=futsal">
+                <button class="buttontut"><span>
+                        <i class="fas fa-external-link-alt"></i>
+                        Team [350₹] </span></button>
+            </a>
+
+            <div class="lisp">
+                <p style="color: #00ff15;"><i class="fa-solid fa-user-gear"></i> Event head : TEJAS PAWAR
+                </p>
+
+                <p><i class="fas fa-users"></i> Team members</p>
+                <ul>
+                    <li>Rounak Singh</li>
+                    <li>Layik A.D.</li>
+                    <li>Atharva Khairnar</li>
+                    <li>Atharva Borade</li>
+                    <li>Shivam Shirsath</li>
+                    <li>Akash Vadhane</li>
+                </ul>
+                <p>Futsal 5 aside is really easy to play. It's like playing normal 11-a-side football and with a few
+                    modified rules to suit.
+                </p>
+                <p class="rules-heading"><i class="fa-solid fa-angles-right"></i> Important Rules!</p>
+                <ul>
+                    <li>
+                        Each game is 20mins long - played in two halves of 10mins fixed time.
+                    </li>
+                    <li>7 players in a team but 5 on the pitch. Rolling substitutes can be made at any time through the
+                        sub-zone.
+                    </li>
+                    <li>A kick-in replaces a throw-in and you have 4seconds to kick it back into play</li>
+                    <li>You take corners like 11-a-side but again you have 4 seconds to take it.
+                    </li>
+                    <li>You start play with a centre like free kicks and penalty kicks like 11 aside football.
+                    </li>
+                    <li>Red and yellow cards plus fines like 11-a-side football fouls means you give&nbsp;away&nbsp;a&nbsp;penalty.
+                    </li>
+                </ul>
+                <!--contact button-->
+                <a href="tel:+919075987902">
+                    <button class="buttontut"><span>
+                            <i class="fas fa-phone"></i>
+                            Contact us </span></button>
+                </a>
+            </div>
+
+        </ul>
+    </div>
+    <hr />
+
+
+    <!--crosswords-->
+
+    <!--<hr class="divider" />
+    <button class="accordion" id="crossword">
+
+        <i class="fas fa-external-link-alt"></i> Cross-word
+    </button>
+    <div class="panel">
+
+        <ul>
+
+
+
+            <a href="https://www.cesasiem.com/p/techfest-event-registration.html?event=TechnicalCrossword">
+                <button class="buttontut"><span>
+                        <i class="fas fa-external-link-alt"></i>
+                        Duo [50₹] </span></button>
+            </a>
+
+            <div class="lisp">
+                <p style="color: rgb(0, 255, 21);"><i class="fa-solid fa-user-gear"></i> Event head : Siddhi Waghchoure
+
+                </p>
+
+                <p><i class="fas fa-users"></i> Team members</p>
+                <ul>
+                    <li> Vibhuti Khaladkar</li>
+                    <li> Harsh Gawali</li>
+                    <li> Bhavesh Duse</li>
+                </ul>
+
+                <p class="rules-heading"><i class="fa-solid fa-angles-right"></i> Important Rules!</p>
+                <ul>
+                    <li>Mobile and smart devices are not allowed</li>
+                    <li>Team of 2 is allowed</li>
+                    <li>Only 10 min will be given for search and fill</li>
+                </ul>
+
+                <a href="tel:+918010545025">
+                    <button class="buttontut"><span>
+                            <i class="fas fa-phone"></i>
+                            Contact us </span></button>
+                </a>
+            </div>
+
+        </ul>
+    </div>
+    <hr>-->
+
+    <!--prompt engineering-->
+    <hr class="divider" />
+    <button class="accordion" id="promptengg">
+
+        <i class="fas fa-desktop"></i>Prompt engineering
+    </button>
+    <div class="panel">
+
+        <ul>
+
+            <a href="https://www.cesasiem.com/p/techfest-event-registration.html?event=Prompt Engineering">
+                <button class="buttontut"><span>
+                        <i class="fas fa-external-link-alt"></i>
+                        Solo [30₹] </span></button>
+            </a>
+
+            <div class="lisp">
+                <p style="color: #00ff15;"><i class="fa-solid fa-user-gear"></i> Event head : BHAVESH DUSE
+
+                </p>
+
+                <p><i class="fas fa-users"></i> Team members</p>
+                <li>
+                </li><li> SHRAVANI VELSE</li>
+                <li>MANTHAN KURADE</li>
+                <li>AMIT BAGADE</li>
+                <li>PRATHAMESH SANT</li>
+                <li>LAVESH PATIL</li>
+                <li>DHAWAL K</li>
+                <li>ABHISHEK GAWANDE</li>
+                <li>SIDDHESH KASAR </li>
+                <li>HRUTIK KHAIRNAR</li>
+        </div></ul>
+
+        <p class="rules-heading"><i class="fa-solid fa-angles-right"></i> Important Rules!</p>
+        <ul>
+            <li>Only Microsoft bing AI model can be used</li>
+            <li>No electronics devices except lab computers are allowed</li>
+            <li>Multiple tabs and other browsers are not allowed</li>
+            <li>In case of any type of cheating spotted, you will be directly disqualified</li>
+            <li>One has to bring his/her email id and password</li>
+            <li>Credits should be full for bing (15 credits)</li>
+            <li>The most matching images will&nbsp;be&nbsp;selected</li>
+            <li>Judges Decision will be final</li>
+
+        </ul>
+
+
+        <a href="tel:+919307401370">
+            <button class="buttontut"><span>
+                    <i class="fas fa-phone"></i>
+                    Contact us </span></button>
+        </a>
+    </div>
+
+    
+    
+    <hr />
+
+
+    <!--valorant-->
+    <hr class="divider" />
+    <button class="accordion" id="valorant">
+
+        <i class="fas fa-gamepad"></i> Valorant
+    </button>
+    <div class="panel">
+
+        <ul>
+
+            <a href="https://www.cesasiem.com/p/techfest-event-registration.html?event=Valorant">
+                <button class="buttontut"><span>
+                        <i class="fas fa-external-link-alt"></i>
+                        Team [250₹] </span></button>
+            </a>
+
+            <div class="lisp">
+                <p style="color: #00ff15;"><i class="fa-solid fa-user-gear"></i> Event head : OMKAR BORSE
+
+                </p>
+
+                <p><i class="fas fa-users"></i> Team members</p>
+                <ul>
+                    <li>Deep Gawande</li>
+                    <li>Suyog Nevde</li>
+                    <li>Vivek Gamne</li>
+                </ul>
+
+                <p class="rules-heading"><i class="fa-solid fa-angles-right"></i> Important Rules!</p>
+                <ol type="1">
+                    <li>
+                        Tournament Format:
+                        <ul>
+                            <li>The tournament will follow a double elimination format.the team who wins 2 maps will
+                                proceed
+                            </li>
+                            <li>
+                                Teams will be randomly seeded at the beginning of the tournament.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        map/agent/weapons:
+                        <ul>
+                            <li>Maps: The map pool will be predetermined and announced before the tournament begins.
+                            </li>
+                            <li>Agent Selection: Players are free to choose any agent available in the game.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Match Procedures:
+                        <ul>
+                            <li>Captains from each team will be responsible for coordinating with the tournament
+                                organizers.
+                            </li>
+                            <li>Matches will be scheduled in advance, and teams must be punctual. Failure to show up
+                                within 15 minutes of the scheduled time will result in a forfeit.</li>
+                            <li>
+                                In the event of a tie, an overtime round will be played. Overtime rules will be
+                                communicated before the match.
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        Player Conduct:
+                        <ul>
+                            <li>Toxic behavior, harassment, or disrespect towards other players or organizers will not
+                                be tolerated and may lead to penalties or disqualification.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Technical Requirements:
+                        <ul>
+                            <li>Teams are responsible for functioning gaming equipment.</li>
+                            <li>Any technical issues encountered during a match must be reported immediately to the
+                                tournament organizers.
+                            </li>
+                            <li>players can bring their own accesories </li>
+
+                        </ul>
+                    </li>
+                </ol>
+
+                <a href="tel:+917498378865">
+                    <button class="buttontut"><span>
+                            <i class="fas fa-phone"></i>
+                            Contact us </span></button>
+                </a>
+            </div>
+
+        </ul>
+    </div>
+    <hr />
+
+
+    <!--roadies-->
+    <hr class="divider" />
+    <button class="accordion" id="roadies">
+
+        <i class="fa fa-road"></i> Roadies
+    </button>
+    <div class="panel">
+
+        <ul>
+
+            <a href="https://www.cesasiem.com/p/techfest-event-registration.html?event=Roadies">
+                <button class="buttontut"><span>
+                        <i class="fas fa-external-link-alt"></i>
+                        Solo [80₹] </span></button>
+            </a>
+
+            <div class="lisp">
+                <p style="color: #00ff15;"><i class="fa-solid fa-user-gear"></i> Event head :
+                    UDHAV SHARMA
+
+                </p>
+
+                <p><i class="fas fa-users"></i> Team members</p>
+                <ul>
+                    <li>Soham Nerkar</li>
+                    <li>Himanshu Patil</li>
+                    <li>Lalit Patil</li>
+                    <li>Ritesh Patil</li>
+                    <li>Manish P</li>
+                    <li>Pranav L</li>
+                    <li>Mohit Thakare</li>
+                </ul>
+
+                <p class="rules-heading"><i class="fa-solid fa-angles-right"></i> Important Rules!</p>
+                <ul>
+                    <li>Follow the rules given by the judges and coordinator </li>
+                    <li>
+                        In Case of any misbehaviour the candidate will be disqualified immediately
+                    </li>
+                </ul>
+
+                <a href="tel:+917006405535">
+                    <button class="buttontut"><span>
+                            <i class="fas fa-phone"></i>
+                            Contact us </span></button>
+                </a>
+
+
+            </div>
+
+        </ul>
+    </div>
+    <hr />
+
+
+    <!--treasure hunt-->
+
+    <hr class="divider" />
+    <button class="accordion" id="treasure">
+
+        <i class="fas fa-map-marked-alt"></i> Treasure Hunt
+    </button>
+    <div class="panel">
+
+        <ul>
+
+            <a href="https://www.cesasiem.com/p/techfest-event-registration.html?event=Treasure Hunt">
+                <button class="buttontut"><span>
+                        <i class="fas fa-external-link-alt"></i>
+                        Team [250₹] </span></button>
+            </a>
+
+            <div class="lisp">
+                <p style="color: #00ff15;"><i class="fa-solid fa-user-gear"></i> Event head : GANESH RODGE
+
+                </p>
+
+                <p><i class="fas fa-users"></i> Team members</p>
+                <ul>
+                    <li>Tejas Gawande</li>
+                    <li>Rahul S</li>
+                    <li>Samiksha Chavan</li>
+                    <li>Shraddha Lade</li>
+                    <li>Sayali Shankpal</li>
+                    <li>Archit</li>
+                    <li>Om Shinde</li>
+                    <li>Kalyani Jare</li>
+                    <li>Chaitali</li>
+                </ul>
+
+                <p class="rules-heading"><i class="fa-solid fa-angles-right"></i> Important Rules!</p>
+                <ul>
+                    <li>No phones during the game.</li>
+                    <li>Register all teammates.</li>
+                    <li>Registrations are final; no refunds.</li>
+                    <li>No late registrations after 12 pm or during the game.</li>
+                    <li>Teammates stay together</li>
+                    <li>Time-based game with 3 round</li>
+                    <li>Preserve clues/chits</li>
+                    <li>Disqualification for cheating, copying, phone use, misbehavior, or property damage</li>
+                    <li>Teams require 5 participants</li>
+                </ul>
+
+                <a href="tel:+919665552822">
+                    <button class="buttontut"><span>
+                            <i class="fas fa-phone"></i>
+                            Contact us </span></button>
+                </a>
+                <a href="https://youtu.be/dsttybxxZJo?si=L91bM8G1sH0sk--m" target="_blank">
+                    <button class="buttontut"><span>
+                            <i class="fa fa-youtube-play"></i>
+                            Demo Video </span></button>
+                </a>
+            </div>
+
+        </ul>
+    </div>
+    <hr />
+
+
+    <!--damsharaj-->
+    <!--<hr class="divider" />
+    <button class="accordion" id="dhamshres">
+
+        <i class="fa-solid fa-film"></i> Damshares
+    </button>
+    <div class="panel">
+
+        <ul>
+
+            <a href="https://www.cesasiem.com/p/techfest-event-registration.html?event=Dhamshres">
+                <button class="buttontut"><span>
+                        <i class="fas fa-external-link-alt"></i>
+                        Team [100₹] </span></button>
+            </a>
+
+            <div class="lisp">
+                <p style="color: rgb(0, 255, 21);"><i class="fa-solid fa-user-gear"></i> Event head : Sakshi Shinde
+                </p>
+
+                <p><i class="fas fa-users"></i> Team members</p>
+                <ul>
+                    <li> Keshav salunke</li>
+                    <li> Anushka mahajan</li>
+                    <li> Gayatri wage</li>
+                    <li> Kaveri dalvi</li>
+                    <li> Pragati nathe</li>
+                </ul>
+
+                <p class="rules-heading"><i class="fa-solid fa-angles-right"></i> Important Rules!</p>
+                <ul>
+                    <li>Team size can be maximum 4 members</li>
+                    <li>only 1.5min will be given to present</li>
+                    <li>No lipsync allowed</li>
+                </ul>
+
+                <a href="tel:+917588474957">
+                    <button class="buttontut"><span>
+                            <i class="fas fa-phone"></i>
+                            Contact us </span></button>
+                </a>
+            </div>
+
+        </ul>
+    </div>
+    <hr>-->
+
+    <!--fillers-->
+    <hr class="divider" />
+    <button class="accordion" id="fillers">
+
+        <i class="fas fa-video"></i> Fillers
+    </button>
+    <div class="panel">
+
+        <ul>
+
+            <a href="https://www.cesasiem.com/p/techfest-event-registration.html?event=Fillers">
+                <button class="buttontut"><span>
+                        <i class="fas fa-external-link-alt"></i>
+                        Solo [30₹] </span></button>
+            </a>
+
+            <div class="lisp">
+                <p style="color: #00ff15;"><i class="fa-solid fa-user-gear"></i> Event head : RIYA ANTHAL
+                </p>
+
+                <p><i class="fas fa-users"></i> Team members</p>
+                <ul>
+                    <li>Madhura Shirsath</li>
+                    <li>Srushti Khatale</li>
+                    <li>Aditya Daund</li>
+                    <li>Srushti Kshirsagar</li>
+                    <li>Arjun Mahale</li>
+                    <li>Rudrani Jangale</li>
+                </ul>
+
+                <p class="rules-heading"><i class="fa-solid fa-angles-right"></i> Important Rules!</p>
+                <ul>
+                    <li>One-minute time limit per game.</li>
+                    <li>Complete the task within the time limit.</li>
+                    <li>Follow given rules.</li>
+                    <li>You can only use provided materials.</li>
+                    <li>One attempt per player.</li>
+                </ul>
+
+                <a href="tel:+917889327724">
+                    <button class="buttontut"><span>
+                            <i class="fas fa-phone"></i>
+                            Contact us </span></button>
+                </a>
+            </div>
+
+        </ul>
+    </div>
+    <hr />
+
+
+    <!--blind coding-->
+    <hr class="divider" />
+    <button class="accordion" id="blindcoding">
+
+        <i class="fa fa-code"></i> Blind Coding
+    </button>
+    <div class="panel">
+
+        <ul>
+
+            <a href="https://www.cesasiem.com/p/techfest-event-registration.html?event=blind-coding">
+                <button class="buttontut"><span>
+                        <i class="fas fa-external-link-alt"></i>
+                        Duo [50₹] </span></button>
+            </a>
+
+            <div class="lisp">
+                <p style="color: #00ff15;"><i class="fa-solid fa-user-gear"></i> Event head : Amit Ashok Arote
+                </p>
+
+                <p><i class="fas fa-users"></i> Team members</p>
+                <ul>
+                    <li> Vedangi Pawar </li>
+                    <li> Diksha kanoj </li>
+                    <li> Mansi Mali </li>
+                    <li> Mansi Sonawane </li>
+                </ul>
+
+                <p class="rules-heading"><i class="fa-solid fa-angles-right"></i> Important Rules!</p>
+                <ul>
+                    <li>No communication: Participants cannot communicate during the competition. </li>
+                    <li>
+                        No internet: Participants must not access the internet or external resources</li>
+                    <li>Time limit: Set a specific time frame for the competition.
+                    </li>
+                    <li>Pre-defined problems: Secretly provide coding challenges at the start.
+                    </li>
+                    <li>
+                        Blind submissions: Code submissions&nbsp;are&nbsp;anonymous.
+                    </li>
+                    <li>Judging criteria: Clearly define how submissions will be evaluated.
+                    </li>
+                    <li>
+                        Fair play: Strict rules against cheating or plagiarism.
+                    </li>
+                    <li>
+                        Code review: Judges examine code for quality and adherence to standards.</li>
+                    <li>Winner announcement: Winners are declared after judging.
+                    </li>
+                    <li>Prizes: Offer rewards for&nbsp;top&nbsp;performers.</li>
+                </ul>
+
+
+                <a href="tel:+918104734934">
+                    <button class="buttontut"><span>
+                            <i class="fas fa-phone"></i>
+                            Contact us </span></button>
+                </a>
+            </div>
+
+        </ul>
+    </div>
+    <hr />
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://codepen.io/denic/pen/YzyPzKG.js"></script>
+
+
+    <script>
+
+        function getUrlParams() {
+            return new URLSearchParams(window.location.search);
+        }
+
+        function updateUrlParam(param, value) {
+            const urlParams = getUrlParams();
+            urlParams.set(param, value);
+
+            // Replace the current URL with the updated parameters
+            window.history.replaceState({}, '', `${window.location.pathname}?${urlParams}`);
+        }
+
+
+        // getting event type
+        const urlParams = new URLSearchParams(window.location.search);
+        let eventType = urlParams.get('event');
+        if (eventType == null || eventType == undefined || eventType == '') {
+            eventType = 'project';
+            updateUrlParam('event', eventType)
+        }
+
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+
+            if (acc[i].id === eventType) {
+                acc[i].click()
+            }
+        }
+    </script>
+
+
+

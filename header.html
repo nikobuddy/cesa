@@ -1,0 +1,190 @@
+<style>
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+       }
+        100% {
+            transform: translateX(calc(-250px * 7));
+       }
+   }
+    .slidery {
+        background: white;
+        box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+        height: 100px;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: 960px;
+   }
+    .slidery::before, .slidery::after {
+        background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+        content: "";
+        height: 100px;
+        position: absolute;
+        width: 200px;
+        z-index: 2;
+   }
+    .slidery::after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+   }
+    .slidery::before {
+        left: 0;
+        top: 0;
+   }
+    .slidery .slide-track {
+        animation: scroll 40s linear infinite;
+        display: flex;
+        width: calc(250px * 14);
+   }
+    .slidery .slide {
+        height: 100px;
+        width: 250px;
+   }
+
+
+   .hedxing {
+    text-align: center;
+    font-weight: 700;
+    font-size: 35px;
+    color: #4d63f1;
+    line-height: 1.4em;
+    margin: 1.5em 0 0.25em;
+    padding-bottom: 25px;
+    animation: beat 4s ease-in-out infinite;
+}
+
+@media only screen and (max-width: 600px) {
+    .hedxing {
+
+    font-size: 25px;
+
+}
+}
+
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+
+     @media screen and (max-width: 768px) {
+       .slidery{
+         margin: 0 10px;
+         width: 400px;
+
+       }
+
+     }
+
+
+
+
+
+
+
+   </style>
+
+
+
+
+
+
+<br />
+<br />
+
+   <div class='section-heading text-center'>
+
+<!-- <h6>Unleashing Innovation and Tech Marvels at</h6> -->
+<h2>TechFest 2k25</h2>
+<p>Our Title Sponsor</p>
+      <img alt='SIEM logo' id='' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiiQK431Tf2UDVx-fHeXsmZTKZmfuPvRdcE3OACyMei4pEfphUsGVpnJsWzeOQOzSRuuDp-FCY5-GYbxTgBsEnZGQRk479t6cHr66pWyjb_u2NHeXQ5jj1XYfrrwJU1YNxZicGV-otVSaKlWs1kAcKOPme7S38R2dWtAEYEz0-y0Z5Ay0-HnKO-o9YH/s500/3.png' style='height:140px ;padding-bottom: 15px;'/>
+
+
+
+
+</div>
+
+     <div class="hedxing">
+   TechFest 2k25 Sponsor's  </div>
+
+
+
+
+
+   <div class="slidery">
+
+       <div class="slide-track">
+           <div class="slide">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjSsdbEN1qQCCBgT5D1kFH7L8IE_Yj_E_G9Oq87O7idI3NbzZ_u-AAH53bczsFD1fwVg0GYUjZrKi73MtIgkHL0z6riZVSLXQ4Hlu9ps7MKMcEcCAByzy3dJuCJrDhg0UsvMuLiWLCw4V-IglR9E5je8Qxhm0_SYq5xtmmceC3LTyHBeHkjN5YqfU4g/s500/4.png" height="100" width="250" alt="" />
+           </div>
+
+
+           <div class="slide">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgcHfsGw5mvPzzJapD4meu-Lw7kJSeaOg9kAJNVtUQKqJp4_0MB1oA3qLXptHVvskaEjGyVFMIcu6OP8uCANSt1LU6mUiWO0e8LsxLmbXKEcZjm5kRjh6ZpzZyZCaOh1WO2Yz3EBsQwr07gweYpeURSETvefM_XyRBuOOwwQeMiHmd6iieNW900zqsa/s500/5.png" height="100" width="250" alt="" />
+           </div>
+
+           <div class="slide">
+
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiIkpgHBSBZSBcULEhZMzkWQoHRYegO3EfAdKoX_mWL7WJdHvIl9GNgNYoR5hAhJUlyZusuKtyatk8AoWVoV0ZYfNvI3j4e4TqtX0Vw7uH1c23blaKCmZTStXU6-XjAynko5yuDWUJTDPfx8ZasH7xnmA33e4F0LLvJMZ9DVpZ3Q6GAiK8ZbG7DjzDI/s500/1.png" height="100" width="250" alt="" />
+           </div>
+
+           <div class="slide">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhvYpVgGrajM7rcyYPEyzG52c8CVKDU42qYO4VzP0gaRKXxvEiCTbgXSPTUatk5x8AaUhArQ7fPqHkMeTdeTq3nCSC7lmR8TteYQ8NCKvjJQKFiycS_4LhrIe2u-TGrpSdWr0sbbhHMpcdO8_t3I6NEKruXdvH8Vp5hPW8wE3WvGX2HR8JdJv8FCyPf/s500/2.png" height="100" width="250" alt="" />
+           </div>
+
+           <div class="slide">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMZR7r2gMiFmX9kuZTwUMeFceVMOX69-kXz4sMiDwPF6t1GHWScRvKOn0Fy63MXDw8OjvMN_WxWdkjY6qIrsYodhvlZPisIjAdoiZ6b9S9i-P1eYUMQj7JEZG7ZbswwSyeC209hWv7H3i6GOgPihzYfk4HafB7H9VDPoLr-SVn6s1Id_a37QYYT5Cz/s500/8.png" height="100" width="250" alt="" />
+           </div>
+
+
+           <div class="slide">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiiQK431Tf2UDVx-fHeXsmZTKZmfuPvRdcE3OACyMei4pEfphUsGVpnJsWzeOQOzSRuuDp-FCY5-GYbxTgBsEnZGQRk479t6cHr66pWyjb_u2NHeXQ5jj1XYfrrwJU1YNxZicGV-otVSaKlWs1kAcKOPme7S38R2dWtAEYEz0-y0Z5Ay0-HnKO-o9YH/s500/3.png" height="100" width="250" alt="" />
+        </div>
+
+
+ <div class="slide">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEipuJrOJ5DJx2mmd4eyMk1X6ztaMxmOTF7Fc6ifcsH-GoqTNcM78WM4jVlhBacfhtA_d9_Bed5HEe8KcrZng4VzlbNDDxbRsz0uzI9mLxy6DZP73DHzHs9Nu3_REDfL1CayqtY7rmLEBlqPJ-mjVyjPj1y3JthJmcpiRDYPoJw5fNFSMmSRIJ6RhdL5/s500/7.png" height="100" width="250" alt="" />
+        </div>
+
+
+           <div class="slide">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjIWxMUJC8pFHtS5SMPjtmLjRajm9pP1RryAoLSt39jrknR8NMWLIvLtfrPic0VmjCugfEcX3qiEAkQK1SM4E-THxEw75hZMPmLPQ7U4RkY4A1AMjPgiddthA48Psj9Qw9nKJza3IXB-NTkezBGnBP_vRhm2yNW1RiOt9JYnupJblyr6yU9uoC_mkRk/s500/10.png" height="100" width="250" alt="" />
+           </div>
+
+
+
+
+
+
+ <div class="slide">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEglVRYD59rjeozYSH5fVerdN7JmH-fzCVU8esWMNptSwqPFoHNDcKJmQ3og7dCbGamPqGcewNtGKrOyvPD6GzDST-AnQVUW1Iyoa-gIU-6_4XH1Gf8k4ewyJ4t2M8kp2InX3SwfmxJLGqBmAXFaVvPmQZBm1TZGlhAqyOb8ZYXSb264yR1cP-vvXWCL/s500/6.png" height="100" width="250" alt="" />
+        </div>
+
+
+
+
+        <div class="slide">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxJyQwfDfMkLYESz8dtgdfyJ1_UYZouvscQCCClXFAp-oKQA4RJa24_4brgf_22gefBv1AeYkvX2JLHbCfx0gyy-Bi7hCP8ZoqslQKpaepSxRnaxDn07LYluf8FHHlFu1NJVuGed_XZwtLsUrEZj39hkjgSX2L9hKxjN_mFyayPMjSYkcArkv8oSRj/s500/9.png" height="100" width="250" alt="" />
+        </div>
+
+       </div>
+
+
+
+
+
+
+
+   </div>
